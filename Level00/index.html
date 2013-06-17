@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title -->
+	<title>Level 0</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Twitter Bootstrap -->
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="container">
+		<!-- Header -->
+		<div class="row-fluid" id="header">
+			<div class="span12">
+				<div class="hero-unit">
+					<h1>Font Family</h1>
+					<p>"Helvetica Neue",Helvetica,Arial,sans-serif;</p>
+				</div>
+			</div>
+		</div>
+		<!-- Navbar -->
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<ul class="nav">
+							<li class="active"><a href="#">AAAAAAAAAAA</a></li>
+							<li><a href="#">BBBBBBBBBBB</a></li>
+							<li><a href="#">CCCCCCCCCCC</a></li>
+							<li><a href="#">DDDDDDDDDDD</a></li>
+							<li><a href="#">EEEEEEEEEEE</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Subheader 1 -->
+		<div class="row-fluid">
+			<div class="main-container">
+				<div class="span12">
+					<h2>Subheader 1</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- Subheaders 2/3 -->
+		<div class="row-fluid">
+			<!-- Food -->
+			<div class="span6">
+				<h2>Subheader 2</h2>
+				<ul>
+					<li>Fruits
+						<ul>
+							<li>Apple
+								<ul>
+									<li>Granny Smith</li>
+									<li>Gala</li>
+								</ul>
+							</li>
+							<li>Banana</li>
+							<li>Tomato</li>
+						</ul>
+					</li>
+					<li>Vegetables
+						<ul>
+							<li>Broccoli</li>
+							<li>Potatoes
+								<ul>
+									<li>Russet Potatoes</li>
+									<li>Baby Reds</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Meats
+						<ul>
+							<li>Chicken</li>
+							<li>Beef</li>
+							<li>Spam</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- Form -->
+			<div class="span6">
+				<h2>Subheader 2</h2>
+				<div class="main-container well" style="overflow:hidden">
+					<form class="form-horizontal" method="GET">
+						<fieldset>
+							<!-- First Name-->
+							<div class="control-group">
+								<label class="control-label" for="firstname">First Name:</label>
+								<div class="controls">
+									<input id="firstname" name="firstname" type="text" class="input-large">
+								</div>
+							</div>
+							<!-- Last Name-->
+							<div class="control-group">
+								<label class="control-label" for="lastname">Last Name:</label>
+								<div class="controls">
+									<input id="lastname" name="lastname" type="text" class="input-large">
+								</div>
+							</div>
+
+							<!-- DOB-->
+							<div class="control-group">
+								<label class="control-label" for="dateofbirth">Date of Birth:</label>
+								<div class="controls">
+									<input id="dateofbirth" name="dateofbirth" type="text" class="input-large">
+								</div>
+							</div>
+
+							<!-- Gender -->		
+							<div class="control-group">
+								<label class="control-label">Gender:</label>
+								<div id="gender" class="controls">
+									<label class="radio inline"><input type="radio" name="gender" id="gender_m" value="M">Male</label>
+									<label class="radio inline"><input type="radio" name="gender" id="gender_f" value="F">Female</label>
+								</div>
+							</div>
+
+							<!-- Select Basic -->
+							<div class="control-group">
+								<label class="control-label" for="favcolor">Fav Color:</label>
+								<div class="controls">
+									<select id="favcolor" name="favcolor" class="input-large">
+										<option value="" disabled="disabled" selected="selected">- Pick One -</option>
+										<option value="red">Red</option>
+										<option value="orange">Orange</option>
+										<option value="yellow">Yellow</option>
+										<option value="green">Green</option>
+										<option value="blue">Blue</option>
+										<option value="indigo">Indigo</option>
+										<option value="violet">Violet</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- Button -->
+							<div class="control-group">
+								<label class="controls">
+									<input type="submit" name="submit" value="Submit" class="btn">
+								</label>
+							</div>
+
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script>
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+	<!-- Modernizr -->
+	<script type="text/javascript" src="./modernizr.js"></script>
+</body>
+</html>
