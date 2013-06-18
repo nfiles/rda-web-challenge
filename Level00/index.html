@@ -9,7 +9,28 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- Twitter Bootstrap -->
+	<!-- CSS Reset -->
+	<style type="text/css">
+		/*
+		*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+		*/
+		html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+		body{line-height:1}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+		nav ul{list-style:none}
+		blockquote,q{quotes:none}
+		blockquote:before,blockquote:after,q:before,q:after{content:none}
+		a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+		ins{background-color:#ff9;color:#000;text-decoration:none}
+		mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+		del{text-decoration:line-through}
+		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+		table{border-collapse:collapse;border-spacing:0}
+		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+		input,select{vertical-align:middle}
+	</style>
+
+	<!-- Twitter Bootstrap -->	
 	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="./bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
 </head>
@@ -18,7 +39,7 @@
 		<!-- Header -->
 		<div class="row-fluid" id="header">
 			<div class="span12">
-				<div class="hero-unit">
+				<div class="page-header hero-unit">
 					<h1>Font Family</h1>
 					<p>"Helvetica Neue",Helvetica,Arial,sans-serif;</p>
 				</div>
@@ -55,107 +76,107 @@
 			</div>
 		</div>
 		<!-- Subheaders 2/3 -->
-		<div class="row-fluid">
-			<!-- Food -->
-			<div class="span6">
-				<h2>Subheader 2</h2>
-				<ul>
-					<li>Fruits
-						<ul>
-							<li>Apple
-								<ul>
-									<li>Granny Smith</li>
-									<li>Gala</li>
-								</ul>
-							</li>
-							<li>Banana</li>
-							<li>Tomato</li>
-						</ul>
-					</li>
-					<li>Vegetables
-						<ul>
-							<li>Broccoli</li>
-							<li>Potatoes
-								<ul>
-									<li>Russet Potatoes</li>
-									<li>Baby Reds</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>Meats
-						<ul>
-							<li>Chicken</li>
-							<li>Beef</li>
-							<li>Spam</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<!-- Form -->
-			<div class="span6">
-				<h2>Subheader 2</h2>
-				<div class="main-container well" style="overflow:hidden">
-					<form class="form-horizontal" method="GET">
-						<fieldset>
-							<!-- First Name-->
-							<div class="control-group">
-								<label class="control-label" for="firstname">First Name:</label>
-								<div class="controls">
-									<input id="firstname" name="firstname" type="text" class="input-large">
-								</div>
-							</div>
-							<!-- Last Name-->
-							<div class="control-group">
-								<label class="control-label" for="lastname">Last Name:</label>
-								<div class="controls">
-									<input id="lastname" name="lastname" type="text" class="input-large">
-								</div>
-							</div>
 
-							<!-- DOB-->
-							<div class="control-group">
-								<label class="control-label" for="dateofbirth">Date of Birth:</label>
-								<div class="controls">
-									<input id="dateofbirth" name="dateofbirth" type="text" class="input-large">
+		<div class="main-container">
+			<div class="row">
+				<!-- Food -->
+				<div class="span6">
+					<h2>Subheader 2</h2>
+					<ul>
+						<li>Fruits
+							<ul>
+								<li>Apple
+									<ul>
+										<li>Granny Smith</li>
+										<li>Gala</li>
+									</ul>
+								</li>
+								<li>Banana</li>
+								<li>Tomato</li>
+							</ul>
+						</li>
+						<li>Vegetables
+							<ul>
+								<li>Broccoli</li>
+								<li>Potatoes
+									<ul>
+										<li>Russet Potatoes</li>
+										<li>Baby Reds</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>Meats
+							<ul>
+								<li>Chicken</li>
+								<li>Beef</li>
+								<li>Spam</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- Form -->
+				<div class="span6">
+					<h2>Subheader 2</h2>
+					<div class="main-container well" style="overflow:hidden">
+						<form class="form form-horizontal" method="GET">
+								<!-- First Name-->
+								<div class="control-group">
+									<label class="control-label" for="firstname">First Name:</label>
+									<div class="controls">
+										<input id="firstname" name="firstname" type="text" class="input-large">
+									</div>
 								</div>
-							</div>
-
-							<!-- Gender -->		
-							<div class="control-group">
-								<label class="control-label">Gender:</label>
-								<div id="gender" class="controls">
-									<label class="radio inline"><input type="radio" name="gender" id="gender_m" value="M">Male</label>
-									<label class="radio inline"><input type="radio" name="gender" id="gender_f" value="F">Female</label>
+								<!-- Last Name-->
+								<div class="control-group">
+									<label class="control-label" for="lastname">Last Name:</label>
+									<div class="controls">
+										<input id="lastname" name="lastname" type="text" class="input-large">
+									</div>
 								</div>
-							</div>
 
-							<!-- Select Basic -->
-							<div class="control-group">
-								<label class="control-label" for="favcolor">Fav Color:</label>
-								<div class="controls">
-									<select id="favcolor" name="favcolor" class="input-large">
-										<option value="" disabled="disabled" selected="selected">- Pick One -</option>
-										<option value="red">Red</option>
-										<option value="orange">Orange</option>
-										<option value="yellow">Yellow</option>
-										<option value="green">Green</option>
-										<option value="blue">Blue</option>
-										<option value="indigo">Indigo</option>
-										<option value="violet">Violet</option>
-									</select>
+								<!-- DOB-->
+								<div class="control-group">
+									<label class="control-label" for="dateofbirth">Date of Birth:</label>
+									<div class="controls">
+										<input id="dateofbirth" name="dateofbirth" type="text" class="input-large">
+									</div>
 								</div>
-							</div>
 
-							<!-- Button -->
-							<div class="control-group">
-								<label class="controls">
-									<input type="submit" name="submit" value="Submit" class="btn">
-								</label>
-							</div>
+								<!-- Gender -->		
+								<div class="control-group">
+									<label class="control-label">Gender:</label>
+									<div id="gender" class="controls">
+										<label class="radio inline"><input type="radio" name="gender" id="gender_m" value="M">Male</label>
+										<label class="radio inline"><input type="radio" name="gender" id="gender_f" value="F">Female</label>
+									</div>
+								</div>
 
-						</fieldset>
-					</form>
+								<!-- Favorite Color -->
+								<div class="control-group">
+									<label class="control-label" for="favcolor">Fav Color:</label>
+									<div class="controls">
+										<select id="favcolor" name="favcolor" class="input-large">
+											<option value="" disabled="disabled" selected="selected">- Pick One -</option>
+											<option value="red">Red</option>
+											<option value="orange">Orange</option>
+											<option value="yellow">Yellow</option>
+											<option value="green">Green</option>
+											<option value="blue">Blue</option>
+											<option value="indigo">Indigo</option>
+											<option value="violet">Violet</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- Button -->
+								<div class="control-group">
+									<label class="controls">
+										<input type="submit" name="submit" value="Submit" class="btn">
+									</label>
+								</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
