@@ -1,132 +1,132 @@
 body {
-	margin: 0;
-	padding: 0;
-	color: black;
-	font-size: 9pt;
-	background-color: white;
-	font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 9pt;
+    background-color: white;
+    font-family: sans-serif;
 }
 
 .top-window-border, .bottom-window-border, .left-window-border, .right-window-border {
-	background: lightgray;
-	position: fixed;
+    background: lightgray;
+    position: fixed;
 }
-	.top-window-border, .bottom-window-border {
-		left: 0; right: 0;
-		height: 4px;
-	}
-		.top-window-border { top: 0; }
-		.bottom-window-border { bottom: 0; }
-	.left-window-border, .right-window-border {
-		top: 0; bottom: 0;
-		width: 4px;
-	}
-		.left-window-border { left: 0; }
-		.right-window-border { right: 0; }
+    .top-window-border, .bottom-window-border {
+        left: 0; right: 0;
+        height: 4px;
+    }
+        .top-window-border { top: 0; }
+        .bottom-window-border { bottom: 0; }
+    .left-window-border, .right-window-border {
+        top: 0; bottom: 0;
+        width: 4px;
+    }
+        .left-window-border { left: 0; }
+        .right-window-border { right: 0; }
 
 #mainCalendar {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 [class^="month"] {
-	margin: 2%;
-	padding: 0;
-	border-radius: .2em;
-	overflow: hidden;
-	min-width: 40em;
-	height: 95%;
-	width: 95%;
-	text-align: center;
+    margin: 2%;
+    padding: 0;
+    border-radius: .2em;
+    overflow: hidden;
+    min-width: 40em;
+    height: 95%;
+    width: 95%;
+    text-align: center;
 }
-	[class^="month"]>.title {
-		text-align: center;
-		font-size: 1.75em;
-		margin: 10px 0;
-		border-bottom: 1px solid red;
-		border-left: 1px solid red;
-	}
+    [class^="month"]>.title {
+        text-align: center;
+        font-size: 1.75em;
+        margin: 10px 0;
+        border-bottom: 1px solid red;
+        border-left: 1px solid red;
+    }
 
 .week {
-	overflow: hidden;
-	padding: 0;
-	margin-left: auto;
-	margin-right: auto;
+    overflow: hidden;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
-	.week:last-child [class^="day"] {
-		border-bottom: 1px solid black;
-	}
+    .week:last-child [class^="day"] {
+        border-bottom: 1px solid black;
+    }
 
 [class^="day"] {
-	text-align: left;
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-	width: 13%;
-	height: 125px;
-	border-left: 1px solid black;
-	border-top: 1px solid black;
-	margin: 0;
-	vertical-align: top;
-	overflow: hidden;
+    text-align: left;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 13%;
+    height: 125px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    margin: 0;
+    vertical-align: top;
+    overflow: hidden;
 }
-	[class^="day"]:hover {
-		background-color: #8bf;
-	}
-	[class^="day"]:last-child {
-		border-right: 1px solid black;
-	}
+    [class^="day"]:hover {
+        background-color: #8bf;
+    }
+    [class^="day"]:last-child {
+        border-right: 1px solid black;
+    }
 [class^="day"] .agenda {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-	[class^="day"] .agenda .task {
-		text-indent: 0;
-		margin-top: .4em;
-		margin-left: .4em;
-	}
-		[class^="day"] .agenda .task .host {
-			font-weight: bold;
-		}
-		[class^="day"] .agenda .task .location {
-			font-style: italic;
-		}
-		[class^="day"] .agenda .task .description {
-			display: none;
-		}
+    [class^="day"] .agenda .task {
+        text-indent: 0;
+        margin-top: .4em;
+        margin-left: .4em;
+    }
+        [class^="day"] .agenda .task .host {
+            font-weight: bold;
+        }
+        [class^="day"] .agenda .task .location {
+            font-style: italic;
+        }
+        [class^="day"] .agenda .task .description {
+            display: none;
+        }
 
 
 .hidden {
-	/*visibility: hidden;*/
-	color: lightgray;
-	background-color: #ddd;
+    /*visibility: hidden;*/
+    color: lightgray;
+    background-color: #ddd;
 }
 
 .date {
-	margin-left: .4em;
-	margin-top: .25em;
-	font-weight: bold;
+    margin-left: .4em;
+    margin-top: .25em;
+    font-weight: bold;
 }
 
 #today {
-	background-color: pink;
+    background-color: pink;
 }
-	#today:hover {
-		background-color: #f66;
-	}
+    #today:hover {
+        background-color: #f66;
+    }
 
 #detail {
-	margin: 10px;
-	text-align: center;
+    margin: 10px;
+    text-align: center;
 }
-	#detail .agenda {
-		margin: 5px;
-		list-style-type: none;
-		padding: 0;
-	}
-		#detail .agenda .host {
-			font-weight: bold;
-		}
-		#detail .agenda .location {
-			font-style: italic;
-		}
+    #detail .agenda {
+        margin: 5px;
+        list-style-type: none;
+        padding: 0;
+    }
+        #detail .agenda .host {
+            font-weight: bold;
+        }
+        #detail .agenda .location {
+            font-style: italic;
+        }
