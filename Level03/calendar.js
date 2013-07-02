@@ -5,10 +5,12 @@
     var todayButton;
     var rightButton;
 
+    var animationTimeStep  = 100;
+
     var DIV_TAG            = '<div></div>';
     var LI_TAG             = '<li></li>';
     var UL_TAG             = '<ul></ul>';
-    var YEARCLASS          = 'year';
+    var YEARCLASS          = 'year-num';
     var MONTHCLASS         = 'month-num';
     var TITLECLASS         = 'title';
     var BODYCLASS          = 'body';
@@ -44,25 +46,19 @@
       "12": { "long": "December",  "short": "Dec", "days": "31" }
     };
 
-    function createDay (_date, _month, _todo) {
+    function createDay (_date, _month) {
         var self = this;
 
         var dayElement = $(DIV_TAG).addClass(DAYCLASS + _date);
 
         if (typeof _date !== 'undefined' && _date !== null) {
             if (_date > 0 && _date <= MONTHS[_month].days) {
-                var dateElement = $(DIV_TAG).addClass(DATECLASS).text(_date);
+                var dateElement = $(DIV_TAG).addClass(DATECLASS)
+                                            .text(_date);
                 var agendaElement = $(UL_TAG).addClass(AGENDACLASS);
 
-                if (typeof _todo !== 'undefined' && todo !== null) {
-                    for (var i = 0; i < _todo.length; ++i) {
-                        var task = $(LI_TAG).addClass(TASKCLASS);
-                        task.text(_todo[i]);
-                        agendaElement.append(task);
-                    }
-                }
-
-                dayElement.append(dateElement).append(agendaElement);
+                dayElement.append(dateElement)
+                          .append(agendaElement);
             } else {
                 dayElement.addClass(HIDDENCLASS);
             }
@@ -82,19 +78,23 @@
         return weekElement;
     }
 
+    function createMonthFromDate (_date) {
+        return createMonth(_date.getMonth(), date.getFullYear());
+    }
+
     function createMonth(_month, _year, _firstday) {
         var self = this;
 
         if (typeof _month === 'undefined' || _month === null) {
-            _month = new Date().getMonth() + 1;
+            _month = (new Date()).getMonth() + 1;
         }
 
         if (typeof _year === 'undefined' || _year === null) {
-            _year = new Date().getFullYear();
+            _year = (new Date()).getFullYear();
         }
 
         if (typeof _firstday === 'undefined' || _firstday === null) {
-            _firstday = new Date(_year + '/' + _month + '/' + '1').getDay();
+            _firstday = (new Date(_year + '/' + _month + '/' + '1')).getDay();
         }
 
         var monthElement = $(DIV_TAG).addClass(MONTHCLASS+_month);
@@ -115,27 +115,66 @@
         return monthElement;
     }
 
-    function getClass (_class) { return '.' + _class; }
-    function getId    (_id)    { return '#' + _id; }
+    function createYear (_year) {
+        var self = this;
+
+        var year = $(DIV_TAG).addClass(YEARCLASS + _year);
+        for (var i = 1; i < 13; ++i) {
+            year.append(createMonth(i, _year));
+        }
+        return year;
+    }
+
+    function createYearFromDate (_date) {
+        return createYear(_date.getFullYear());
+    }
+
+    function _c (c) { return '.' + c; }
+    function _i (i) { return '#' + i; }
 
     function yearSelector (_date) {
-        return getClass(YEARCLASS) + (_date.getFullYear());
+        return _c(YEARCLASS) + (_date.getFullYear());
     }
 
     function monthSelector(_date) {
-        return getClass(MONTHCLASS) + (_date.getMonth() + 1);
+        return _c(MONTHCLASS) + (_date.getMonth() + 1);
     }
 
     function daySelector (_date) {
-        return getClass(DAYCLASS) + (_date.getDate());
+        return _c(DAYCLASS) + (_date.getDate());
+    }
+
+    function yearMonthSelector (_date) {
+        return yearSelector(_date) + ' ' + monthSelector(_date);
     }
 
     function monthDaySelector(_date) {
         return monthSelector(_date) + ' ' + daySelector(_date);
     }
 
+    function yearMonthDaySelector (_date) {
+        // alert(yearSelector (_date) + ' ' +
+        //        monthSelector(_date) + ' ' +
+        //        daySelector  (_date));
+        return yearSelector (_date) + ' ' +
+               monthSelector(_date) + ' ' +
+               daySelector  (_date);
+    }
+
+    function compositeSelector () {
+        if (arguments.length > 0) {
+            var selector = arguments[0];
+            for (var i = 1; i < arguments.length; ++i) {
+                selector += ' ' + arguments[i];
+            }
+            return selector;
+        }
+        return undefined;
+    }
+
     function highlightTodayWithin(_calendar) {
-        _calendar.find(monthDaySelector(new Date())).attr('id', TODAYID);
+        _calendar.find(yearMonthDaySelector(new Date()))
+                 .attr('id', TODAYID);
     }
 
     function addEventsToCalendar(_events, _calendar) {
@@ -157,44 +196,67 @@
 
             var rawDate = _element.Date;
             if (rawDate.split(' ').length < 3) {
-                rawDate += ' ' + new Date().getFullYear();
+                rawDate += ' ' + current_date.getFullYear();
             }
             var agenda = _calendar
-                            .find(monthDaySelector(new Date(rawDate)))
+                            .find(yearMonthDaySelector(new Date(rawDate)))
                             .find('.' + AGENDACLASS);
             agenda.append(task);
         });
     }
 
+    // Detail modification
     function displayEventDetail () {
         var self = $(this);
-        var detail = $(getId(DETAILCLASS));
+        var detail = $(_i(DETAILCLASS));
         detail.html(self.find('.' + AGENDACLASS).clone());
     }
     function hideEventDetail () {
-        var detail = $(getId(DETAILCLASS));
+        var detail = $(_i(DETAILCLASS));
         detail.empty();
     }
 
-    function refreshCalendar() {
-        month = createMonth(current_date.getMonth() + 1, current_date.getFullYear());
-        calendar.html(month);
+    // Navigation
+    function goPreviousMonth () {
+        var prev_month = new Date(current_date.getTime());
+        prev_month.setMonth(prev_month.getMonth() - 1);
+        gotoDate(prev_month);
+    }
+    function goNextMonth () {
+        var next_month = new Date(current_date.getTime());
+        next_month.setMonth(next_month.getMonth() + 1);
+        gotoDate(next_month);
+    }
+    function goToday() {
+        gotoDate(new Date());
+    }
+    function gotoDate (_date) {
+        if (current_date.toDateString() !== _date.toDateString()) {
+            current_date = _date;
+            animateCalendar();
+        }
+    }
+
+    // Calendar manipulation
+    function animateCalendar() {
+        hideEventDetail();
+        calendar.find("[class^='month-num']").fadeOut(0);
+        var current_month = calendar.find(yearMonthSelector(current_date));
+        if (current_month.length < 1) {
+            initializeCalendar();
+            current_month = calendar.find(yearMonthSelector(current_date));
+        }
+        current_month.fadeIn(animationTimeStep);
+    }
+
+    function initializeCalendar () {
+        var year = createYear(current_date.getFullYear());
+        calendar.html(year);
         highlightTodayWithin(calendar);
         addEventsToCalendar(events, calendar);
         hideEventDetail();
-    }
 
-    function goPreviousMonth () {
-        current_date.setMonth(current_date.getMonth() - 1);
-        refreshCalendar();
-    }
-    function goNextMonth () {
-        current_date.setMonth(current_date.getMonth() + 1);
-        refreshCalendar();
-    }
-    function goToday() {
-        current_date = new Date();
-        refreshCalendar();
+        animateCalendar();
     }
 
     function wireEvents (argument) {
@@ -205,13 +267,13 @@
     }
 
     $(function () {
-        calendar     = $(getId('mainCalendar'));
+        calendar     = $(_i('mainCalendar'));
         current_date = new Date();
-        leftButton   = $(getClass(LEFTMONTHCLASS));
-        todayButton  = $(getClass(TODAYBUTTONCLASS));
-        rightButton  = $(getClass(RIGHTMONTHCLASS));
+        leftButton   = $(_c(LEFTMONTHCLASS));
+        todayButton  = $(_c(TODAYBUTTONCLASS));
+        rightButton  = $(_c(RIGHTMONTHCLASS));
 
         wireEvents();
-        refreshCalendar();
+        initializeCalendar();
     });
 })(jQuery);

@@ -40,5 +40,11 @@ var events = [
     "Host": "asdf",
     "Location": "place",
     "Description": "things"
+  },
+  {
+    "Date": "Jul 2 2013",
+    "Host": "asdf",
+    "Location": "place",
+    "Description": "things"
   }
 ];
