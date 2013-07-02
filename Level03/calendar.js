@@ -1,13 +1,19 @@
 (function($) {
+    var current_date;
+    var calendar;
+    var leftButton;
+    var todayButton;
+    var rightButton;
+
     var DIV_TAG            = '<div></div>';
     var LI_TAG             = '<li></li>';
     var UL_TAG             = '<ul></ul>';
     var YEARCLASS          = 'year';
-    var MONTHCLASS         = 'month';
+    var MONTHCLASS         = 'month-num';
     var TITLECLASS         = 'title';
     var BODYCLASS          = 'body';
     var WEEKCLASS          = 'week';
-    var DAYCLASS           = 'day';
+    var DAYCLASS           = 'day-num';
     var DATECLASS          = 'date';
     var AGENDACLASS        = 'agenda';
     var TASKCLASS          = 'task';
@@ -20,6 +26,9 @@
     var TOPLEFTBORDERCLASS = 'top-left-border';
     var BOTTOMBORDERCLASS  = 'bottom-border';
     var RIGHTBORDERCLASS   = 'right-border';
+    var LEFTMONTHCLASS     = 'month-left';
+    var TODAYBUTTONCLASS   = 'today-button';
+    var RIGHTMONTHCLASS    = 'month-right';
     var MONTHS = {
       "1":  { "long": "January",   "short": "Jan", "days": "31" },
       "2":  { "long": "February",  "short": "Feb", "days": "28" },
@@ -38,7 +47,7 @@
     function createDay (_date, _month, _todo) {
         var self = this;
 
-        var dayElement = $(DIV_TAG).addClass(DAYCLASS+_date);
+        var dayElement = $(DIV_TAG).addClass(DAYCLASS + _date);
 
         if (typeof _date !== 'undefined' && _date !== null) {
             if (_date > 0 && _date <= MONTHS[_month].days) {
@@ -62,17 +71,6 @@
         return dayElement;
     }
 
-    function createDays(_start, _month) {
-        var self = this;
-
-        var days = [];
-        for (var i = _start; i < start + 7; ++i) {
-            days.push(createDay(i, _month));
-        }
-
-        return days;
-    }
-
     function createWeek(_days) {
         var self = this;
 
@@ -82,21 +80,6 @@
         }
 
         return weekElement;
-    }
-
-    function createMonthFromWeeks(_month, _weeks) {
-        var self = this;
-
-        var monthElement = $(DIV_TAG).addClass(MONTHCLASS+_month);
-        var titleElement = $(DIV_TAG).addClass(TITLECLASS).text(MONTHS[_month].long);
-        var monthBodyElement = $(DIV_TAG).addClass(BODYCLASS);
-
-        monthElement.append(titleElement, monthBodyElement);
-        for (var i = 0; i < _weeks.length; ++i) {
-            monthBodyElement.append(_weeks[i]);
-        }
-
-        return monthElement;
     }
 
     function createMonth(_month, _year, _firstday) {
@@ -115,7 +98,7 @@
         }
 
         var monthElement = $(DIV_TAG).addClass(MONTHCLASS+_month);
-        var titleElement = $(DIV_TAG).addClass(TITLECLASS).text(MONTHS[_month].long);
+        var titleElement = $(DIV_TAG).addClass(TITLECLASS).text(MONTHS[_month].long + ' - ' + _year);
         var monthBodyElement = $(DIV_TAG).addClass(BODYCLASS);
 
         monthElement.append(titleElement, monthBodyElement);
@@ -183,20 +166,52 @@
         });
     }
 
-    var displayEvents = function () {
+    function displayEventDetail () {
         var self = $(this);
-        var detail = $('#' + DETAILCLASS);
+        var detail = $(getId(DETAILCLASS));
         detail.html(self.find('.' + AGENDACLASS).clone());
-    };
+    }
+    function hideEventDetail () {
+        var detail = $(getId(DETAILCLASS));
+        detail.empty();
+    }
+
+    function refreshCalendar() {
+        month = createMonth(current_date.getMonth() + 1, current_date.getFullYear());
+        calendar.html(month);
+        highlightTodayWithin(calendar);
+        addEventsToCalendar(events, calendar);
+        hideEventDetail();
+    }
+
+    function goPreviousMonth () {
+        current_date.setMonth(current_date.getMonth() - 1);
+        refreshCalendar();
+    }
+    function goNextMonth () {
+        current_date.setMonth(current_date.getMonth() + 1);
+        refreshCalendar();
+    }
+    function goToday() {
+        current_date = new Date();
+        refreshCalendar();
+    }
+
+    function wireEvents (argument) {
+        calendar.on('click', "[class^='day-num']", displayEventDetail);
+        leftButton.on('click', goPreviousMonth);
+        todayButton.on('click', goToday);
+        rightButton.on('click', goNextMonth);
+    }
 
     $(function () {
-        var calendar = $('#mainCalendar');
-        var month = createMonth(6);
+        calendar     = $(getId('mainCalendar'));
+        current_date = new Date();
+        leftButton   = $(getClass(LEFTMONTHCLASS));
+        todayButton  = $(getClass(TODAYBUTTONCLASS));
+        rightButton  = $(getClass(RIGHTMONTHCLASS));
 
-        calendar.append(month);
-        highlightTodayWithin(calendar);
-
-        addEventsToCalendar(events, calendar);
-        $('#mainCalendar').on("click", "[class^='day']", displayEvents);
+        wireEvents();
+        refreshCalendar();
     });
 })(jQuery);
