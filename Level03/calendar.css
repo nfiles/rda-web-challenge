@@ -5,6 +5,9 @@ body {
     font-size: 9pt;
     background-color: white;
     font-family: sans-serif;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .top-window-border, .bottom-window-border, .left-window-border, .right-window-border {
@@ -13,13 +16,13 @@ body {
 }
     .top-window-border, .bottom-window-border {
         left: 0; right: 0;
-        height: 4px;
+        height: .25em;
     }
         .top-window-border { top: 0; }
         .bottom-window-border { bottom: 0; }
     .left-window-border, .right-window-border {
         top: 0; bottom: 0;
-        width: 4px;
+        width: .25em;
     }
         .left-window-border { left: 0; }
         .right-window-border { right: 0; }
@@ -30,38 +33,48 @@ body {
     text-align: center;
 }
 .calendar-button {
-    /*background-color: white;*/
-    /*border: 1px solid grey;*/
-    width: 25%;
-    height: 2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid gray;
+    width: 31%;
+    height: 1.75em;
+    margin: 0 .5%;
 }
-.month-left {
-    /*margin-left: 3em;*/
-    /*float: left;*/
+    .calendar-button:hover {
+        background-color: #6c9;
+    }
+    .calendar-button:active {
+        background-color: lightgray;
+    }
+/*.month-left {
+    margin-left: 3em;
+    float: left;
 }
 .month-right {
-    /*margin-right: 3em;*/
-    /*float: right;*/
+    margin-right: 3em;
+    float: right;
 }
 .today-button {
-    /*text-align: center;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*float: center;*/
-}
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    float: center;
+}*/
 
 #mainCalendar {
     overflow: hidden;
+    width: 69%;
+    float: left;
 }
 
 [class^="month-num"] {
-    margin: 2%;
+    margin: 1em 0;
     padding: 0;
     border-radius: .2em;
     overflow: hidden;
-    min-width: 40em;
     height: 95%;
-    width: 95%;
+    width: 100%;
     text-align: center;
 }
     [class^="month-num"]>.title {
@@ -80,14 +93,13 @@ body {
     .week:last-child [class^="day-num"] {
         border-bottom: 1px solid black;
     }
-
 [class^="day-num"] {
     text-align: left;
     display: inline-block;
     zoom: 1;
     *display: inline;
     width: 13%;
-    height: 125px;
+    height: 10em;
     border-left: 1px solid black;
     border-top: 1px solid black;
     margin: 0;
@@ -107,13 +119,17 @@ body {
 }
     [class^="day-num"] .agenda .task {
         text-indent: 0;
-        margin-top: .4em;
+        margin-top: .5em;
         margin-left: .4em;
     }
+        [class^="day-num"] .agenda .task .detail-date {
+            display: none;
+        }
         [class^="day-num"] .agenda .task .host {
             font-weight: bold;
         }
         [class^="day-num"] .agenda .task .location {
+            display: none;
             font-style: italic;
         }
         [class^="day-num"] .agenda .task .description {
@@ -141,17 +157,75 @@ body {
     }
 
 #detail {
-    margin: 10px;
+    width: 29%;
+    float: right;
+    margin-top: 4.8em;
     text-align: center;
 }
-    #detail .agenda {
-        margin: 5px;
+    #detail .display-events .agenda {
+        margin: 0;
         list-style-type: none;
         padding: 0;
     }
-        #detail .agenda .host {
+        #detail .display-events .agenda .task {
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            padding: .75em .25em;
+        }
+            #detail .display-events .agenda .task:nth-child(odd) {
+                background-color: lightgrey;
+            }
+                #detail .display-events .agenda .task .detail-date {
+                    margin-bottom: .5em;
+                }
+                #detail .display-events .agenda .task .host {
+                    font-weight: bold;
+                }
+                #detail .display-events .agenda .task .location {
+                    font-style: italic;
+                }
+    #detail .new-task {
+        border: 1px solid red;
+        font-size: 1.5em;
+        line-height: 2em;
+        vertical-align: middle;
+        background-color: white;
+        width: 100%;
+        margin: 0;
+        font-weight: bold;
+    }
+        #detail .new-task:hover {
+            background-color: #6c9;
+        }
+    #detail .new-task-details {
+        margin: inherit 0;
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        border: 1px solid black;
+    }
+        #detail .new-task-details > legend {
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+        #detail .new-task-details [class$="input"] {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #detail .new-task-details .new-task-input {
+            margin: 1em auto;
             font-weight: bold;
         }
-        #detail .agenda .location {
-            font-style: italic;
+        #detail .new-task-details .new-task-input .description-input {
+            width: 95%;
+            height: 5em;
         }
+    #detail .new-task-details .submit-task {
+        border: 1px solid green;
+        background-color: lightgray;
+        width: 40%;
+        line-height: 1.5em;
+    }

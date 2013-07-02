@@ -1,36 +1,61 @@
 (function($) {
     var current_date;
     var calendar;
+    var detail;
+    var displayEvents;
     var leftButton;
     var todayButton;
     var rightButton;
+    var newTaskButton;
+    var editTaskDetails;
+    var inputDetailDate;
+    var inputHost;
+    var inputLocation;
+    var inputDescription;
+    var submitTaskButton;
 
-    var animationTimeStep  = 100;
+    var animationTimeStep     = 100;
 
-    var DIV_TAG            = '<div></div>';
-    var LI_TAG             = '<li></li>';
-    var UL_TAG             = '<ul></ul>';
-    var YEARCLASS          = 'year-num';
-    var MONTHCLASS         = 'month-num';
-    var TITLECLASS         = 'title';
-    var BODYCLASS          = 'body';
-    var WEEKCLASS          = 'week';
-    var DAYCLASS           = 'day-num';
-    var DATECLASS          = 'date';
-    var AGENDACLASS        = 'agenda';
-    var TASKCLASS          = 'task';
-    var HOSTCLASS          = 'host';
-    var LOCATIONCLASS      = 'location';
-    var DESCRIPTIONCLASS   = 'description';
-    var TODAYID            = 'today';
-    var HIDDENCLASS        = 'hidden';
-    var DETAILCLASS        = 'detail';
-    var TOPLEFTBORDERCLASS = 'top-left-border';
-    var BOTTOMBORDERCLASS  = 'bottom-border';
-    var RIGHTBORDERCLASS   = 'right-border';
-    var LEFTMONTHCLASS     = 'month-left';
-    var TODAYBUTTONCLASS   = 'today-button';
-    var RIGHTMONTHCLASS    = 'month-right';
+    // tags
+    var DIV_TAG               = '<div></div>';
+    var LI_TAG                = '<li></li>';
+    var UL_TAG                = '<ul></ul>';
+
+    // classes
+    var YEARCLASS             = 'year-num';
+    var MONTHCLASS            = 'month-num';
+    var TITLECLASS            = 'title';
+    var BODYCLASS             = 'body';
+    var WEEKCLASS             = 'week';
+    var DAYCLASS              = 'day-num';
+    var DATECLASS             = 'date';
+    var AGENDACLASS           = 'agenda';
+    var TASKCLASS             = 'task';
+    var HOSTCLASS             = 'host';
+    var LOCATIONCLASS         = 'location';
+    var DESCRIPTIONCLASS      = 'description';
+    var DETAILDATECLASS       = 'detail-date';
+    var HIDDENCLASS           = 'hidden';
+    var DISPLAYEVENTSCLASS    = 'display-events';
+    var NEWTASKCLASS          = 'new-task';
+    var NEWTASKDETAILSCLASS   = 'new-task-details';
+    var DATEINPUTCLASS        = 'date-input';
+    var HOSTINPUTCLASS        = 'host-input';
+    var LOCATIONINPUTCLASS    = 'location-input';
+    var DESCRIPTIONINPUTCLASS = 'description-input';
+    var SUBMITTASKCLASS       = 'submit-task';
+    var TOPLEFTBORDERCLASS    = 'top-left-border';
+    var BOTTOMBORDERCLASS     = 'bottom-border';
+    var RIGHTBORDERCLASS      = 'right-border';
+    var LEFTMONTHCLASS        = 'month-left';
+    var TODAYBUTTONCLASS      = 'today-button';
+    var RIGHTMONTHCLASS       = 'month-right';
+
+    // ids
+    var TODAYID               = 'today';
+    var DETAILID              = 'detail';
+
+    // month information
     var MONTHS = {
       "1":  { "long": "January",   "short": "Jan", "days": "31" },
       "2":  { "long": "February",  "short": "Feb", "days": "28" },
@@ -98,7 +123,8 @@
         }
 
         var monthElement = $(DIV_TAG).addClass(MONTHCLASS+_month);
-        var titleElement = $(DIV_TAG).addClass(TITLECLASS).text(MONTHS[_month].long + ' - ' + _year);
+        var titleElement = $(DIV_TAG).addClass(TITLECLASS)
+                                     .text(MONTHS[_month].long + ' - ' + _year);
         var monthBodyElement = $(DIV_TAG).addClass(BODYCLASS);
 
         monthElement.append(titleElement, monthBodyElement);
@@ -116,11 +142,17 @@
     }
 
     function createYear (_year) {
-        var self = this;
-
         var year = $(DIV_TAG).addClass(YEARCLASS + _year);
         for (var i = 1; i < 13; ++i) {
             year.append(createMonth(i, _year));
+        }
+        return year;
+    }
+
+    function createYearWithMonths (_year, _months) {
+        var year = $(DIV_TAG).addClass(YEARCLASS + _year);
+        for (var i = 0; i < _months.length; ++i) {
+            year.append(_months[i]);
         }
         return year;
     }
@@ -131,37 +163,39 @@
 
     function _c (c) { return '.' + c; }
     function _i (i) { return '#' + i; }
+    function classBeginsWith (_prefix) {
+        return '[class^="' + _prefix + '"]';
+    }
 
-    function yearSelector (_date) {
+    function year (_date) {
         return _c(YEARCLASS) + (_date.getFullYear());
     }
 
-    function monthSelector(_date) {
+    function month (_date) {
         return _c(MONTHCLASS) + (_date.getMonth() + 1);
     }
 
-    function daySelector (_date) {
+    function day (_date) {
         return _c(DAYCLASS) + (_date.getDate());
     }
 
-    function yearMonthSelector (_date) {
-        return yearSelector(_date) + ' ' + monthSelector(_date);
+    function yearMonth (_date) {
+        return composeSelectors(year (_date),
+                                month(_date));
     }
 
-    function monthDaySelector(_date) {
-        return monthSelector(_date) + ' ' + daySelector(_date);
+    function monthDay(_date) {
+        return composeSelectors(_c(month(_date)),
+                                _c(day  (_date)));
     }
 
-    function yearMonthDaySelector (_date) {
-        // alert(yearSelector (_date) + ' ' +
-        //        monthSelector(_date) + ' ' +
-        //        daySelector  (_date));
-        return yearSelector (_date) + ' ' +
-               monthSelector(_date) + ' ' +
-               daySelector  (_date);
+    function yearMonthDay (_date) {
+        return composeSelectors(year (_date),
+                                month(_date),
+                                day  (_date));
     }
 
-    function compositeSelector () {
+    function composeSelectors () {
         if (arguments.length > 0) {
             var selector = arguments[0];
             for (var i = 1; i < arguments.length; ++i) {
@@ -173,7 +207,7 @@
     }
 
     function highlightTodayWithin(_calendar) {
-        _calendar.find(yearMonthDaySelector(new Date()))
+        _calendar.find(yearMonthDay(new Date()))
                  .attr('id', TODAYID);
     }
 
@@ -182,6 +216,8 @@
             var task        = $(LI_TAG)
                                 .addClass(TASKCLASS);
 
+            var detail_date = $(DIV_TAG)
+                                .addClass(DETAILDATECLASS);
             var host        = $(DIV_TAG)
                                 .addClass(HOSTCLASS)
                                 .text(_element.Host);
@@ -192,14 +228,17 @@
                                 .addClass(DESCRIPTIONCLASS)
                                 .text(_element.Description);
 
-            task.append(host, location, description);
+            task.append(detail_date, host, location, description);
 
             var rawDate = _element.Date;
             if (rawDate.split(' ').length < 3) {
                 rawDate += ' ' + current_date.getFullYear();
             }
+            var date = new Date(rawDate);
+
+            detail_date.text(date.toDateString());
             var agenda = _calendar
-                            .find(yearMonthDaySelector(new Date(rawDate)))
+                            .find(yearMonthDay(date))
                             .find('.' + AGENDACLASS);
             agenda.append(task);
         });
@@ -208,12 +247,10 @@
     // Detail modification
     function displayEventDetail () {
         var self = $(this);
-        var detail = $(_i(DETAILCLASS));
-        detail.html(self.find('.' + AGENDACLASS).clone());
+        displayEvents.html(self.find(_c(AGENDACLASS)).clone());
     }
     function hideEventDetail () {
-        var detail = $(_i(DETAILCLASS));
-        detail.empty();
+        displayEvents.empty();
     }
 
     // Navigation
@@ -240,18 +277,21 @@
     // Calendar manipulation
     function animateCalendar() {
         hideEventDetail();
-        calendar.find("[class^='month-num']").fadeOut(0);
-        var current_month = calendar.find(yearMonthSelector(current_date));
+        calendar.find(classBeginsWith(MONTHCLASS)).fadeOut(0);
+        var current_month = calendar.find(yearMonth(current_date));
         if (current_month.length < 1) {
             initializeCalendar();
-            current_month = calendar.find(yearMonthSelector(current_date));
+            current_month = calendar.find(yearMonth(current_date));
         }
         current_month.fadeIn(animationTimeStep);
     }
 
     function initializeCalendar () {
+        editTaskDetails.hide();
         var year = createYear(current_date.getFullYear());
+        year.find(classBeginsWith(MONTHCLASS)).hide();
         calendar.html(year);
+
         highlightTodayWithin(calendar);
         addEventsToCalendar(events, calendar);
         hideEventDetail();
@@ -259,20 +299,75 @@
         animateCalendar();
     }
 
+    // New Task Entry and Modification
+    function beginEditingNewTask (event) {
+        // clear input fields
+        inputDetailDate.val('');
+        inputHost.val('');
+        inputLocation.val('');
+        inputDescription.text('');
+
+        displayEvents.fadeOut(animationTimeStep);
+        newTaskButton.fadeOut(animationTimeStep, function () {
+            editTaskDetails.fadeIn(animationTimeStep);
+        });
+    }
+
+    function editExistingTask (event) {
+        var $this = $(this);
+        var current_detail_date = $this.find(_c(DETAILDATECLASS));
+        var current_host        = $this.find(_c(HOSTCLASS));
+        var current_location    = $this.find(_c(LOCATIONCLASS));
+        var current_description = $this.find(_c(DESCRIPTIONCLASS));
+
+        inputDetailDate.val(current_detail_date.text());
+        inputHost.val(current_host.text());
+        inputLocation.val(current_location.text());
+        inputDescription.text(current_description.text());
+
+        displayEvents.fadeOut(animationTimeStep);
+        newTaskButton.fadeOut(animationTimeStep, function () {
+            editTaskDetails.fadeIn(animationTimeStep);
+        });
+    }
+
+    function submitTask (event) {
+        editTaskDetails.fadeOut(animationTimeStep, function() {
+            displayEvents.fadeIn(animationTimeStep);
+            newTaskButton.fadeIn(animationTimeStep);
+        });
+    }
+
+    function bindObjects (argument) {
+        calendar         = $(_i('mainCalendar'));
+        detail           = $(_i(DETAILID));
+        displayEvents    = $(_c(DISPLAYEVENTSCLASS));
+        leftButton       = $(_c(LEFTMONTHCLASS));
+        todayButton      = $(_c(TODAYBUTTONCLASS));
+        rightButton      = $(_c(RIGHTMONTHCLASS));
+        newTaskButton    = $(_c(NEWTASKCLASS));
+        editTaskDetails  = $(_c(NEWTASKDETAILSCLASS));
+        inputDetailDate  = editTaskDetails.find(_c(DATEINPUTCLASS));
+        inputHost        = editTaskDetails.find(_c(HOSTINPUTCLASS));
+        inputLocation    = editTaskDetails.find(_c(LOCATIONINPUTCLASS));
+        inputDescription = editTaskDetails.find(_c(DESCRIPTIONINPUTCLASS));
+        submitTaskButton = $(_c(SUBMITTASKCLASS));
+    }
+
     function wireEvents (argument) {
-        calendar.on('click', "[class^='day-num']", displayEventDetail);
+        calendar.on('click', classBeginsWith(DAYCLASS), displayEventDetail);
         leftButton.on('click', goPreviousMonth);
         todayButton.on('click', goToday);
-        rightButton.on('click', goNextMonth);
+        rightButton.on('click',   goNextMonth);
+        newTaskButton.on('click', beginEditingNewTask);
+        detail.on('click', _c(TASKCLASS), editExistingTask);
+        submitTaskButton.on('click', submitTask);
     }
 
     $(function () {
-        calendar     = $(_i('mainCalendar'));
-        current_date = new Date();
-        leftButton   = $(_c(LEFTMONTHCLASS));
-        todayButton  = $(_c(TODAYBUTTONCLASS));
-        rightButton  = $(_c(RIGHTMONTHCLASS));
+        current_date  = new Date('Jun 1 2013');
 
+        bindObjects();
         wireEvents();
         initializeCalendar();
     });
