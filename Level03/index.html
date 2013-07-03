@@ -42,25 +42,28 @@
         <label for="date-input">
           Date:
         </label>
-        <input type="text" name="date-input" class="date-input" />
+        <div class="error">Enter a valid date</div>
+        <input type="text" name="date-input" class="date-input" id="date-input" />
       </div>
       <div class="new-task-input">
         <label for="host-input">
           Host:
         </label>
-        <input type="text" name="host-input" class="host-input" />
+        <div class="error">Required</div>
+        <input type="text" name="host-input" class="host-input" id="host-input" />
       </div>
       <div class="new-task-input">
         <label for="location-input">
           Location:
         </label>
-        <input type="text" name="location-input" class="location-input" />
+        <div class="error">Required</div>
+        <input type="text" name="location-input" class="location-input" id="location-input" />
       </div>
       <div class="new-task-input">
         <label for="description-input">
           Description:
         </label>
-        <textarea name="description-input" class="description-input"></textarea>
+        <textarea name="description-input" class="description-input" id="description-input"></textarea>
       </div>
       <button class="submit-task">OK</button>
     </fieldset>

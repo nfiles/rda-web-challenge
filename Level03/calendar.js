@@ -12,7 +12,11 @@
     var inputHost;
     var inputLocation;
     var inputDescription;
+    var errorDetailDate;
+    var errorHost;
+    var errorLocation;
     var submitTaskButton;
+    var openTaskIndex;
 
     var animationTimeStep     = 100;
 
@@ -20,6 +24,7 @@
     var DIV_TAG               = '<div></div>';
     var LI_TAG                = '<li></li>';
     var UL_TAG                = '<ul></ul>';
+    var BUTTON_TAG            = '<button></button>';
 
     // classes
     var YEARCLASS             = 'year-num';
@@ -43,6 +48,8 @@
     var HOSTINPUTCLASS        = 'host-input';
     var LOCATIONINPUTCLASS    = 'location-input';
     var DESCRIPTIONINPUTCLASS = 'description-input';
+    var ERRORCLASS            = 'error';
+    var DELETECLASS           = 'delete';
     var SUBMITTASKCLASS       = 'submit-task';
     var TOPLEFTBORDERCLASS    = 'top-left-border';
     var BOTTOMBORDERCLASS     = 'bottom-border';
@@ -185,8 +192,8 @@
     }
 
     function monthDay(_date) {
-        return composeSelectors(_c(month(_date)),
-                                _c(day  (_date)));
+        return composeSelectors(month(_date),
+                                day  (_date));
     }
 
     function yearMonthDay (_date) {
@@ -230,24 +237,36 @@
 
             task.append(detail_date, host, location, description);
 
-            var rawDate = _element.Date;
-            if (rawDate.split(' ').length < 3) {
-                rawDate += ' ' + current_date.getFullYear();
-            }
-            var date = new Date(rawDate);
+            var date = dateFromString(_element.Date);
 
             detail_date.text(date.toDateString());
             var agenda = _calendar
                             .find(yearMonthDay(date))
-                            .find('.' + AGENDACLASS);
+                            .find(_c(AGENDACLASS));
             agenda.append(task);
         });
+    }
+
+    function dateFromString (_string) {
+        var rawDate = _string;
+        if (rawDate.split(' ').length < 3) {
+            rawDate += ' ' + current_date.getFullYear();
+        }
+        return new Date(rawDate);
     }
 
     // Detail modification
     function displayEventDetail () {
         var self = $(this);
         displayEvents.html(self.find(_c(AGENDACLASS)).clone());
+
+        displayEvents.find(_c(TASKCLASS))
+                     .append($(BUTTON_TAG).addClass(DELETECLASS));
+
+        editTaskDetails.fadeOut(animationTimeStep, function () {
+            newTaskButton.fadeIn(animationTimeStep);
+            displayEvents.fadeIn(animationTimeStep);
+        });
     }
     function hideEventDetail () {
         displayEvents.empty();
@@ -288,6 +307,7 @@
 
     function initializeCalendar () {
         editTaskDetails.hide();
+
         var year = createYear(current_date.getFullYear());
         year.find(classBeginsWith(MONTHCLASS)).hide();
         calendar.html(year);
@@ -305,7 +325,13 @@
         inputDetailDate.val('');
         inputHost.val('');
         inputLocation.val('');
-        inputDescription.text('');
+        inputDescription.val('');
+
+        errorDetailDate.hide();
+        errorHost.hide();
+        errorLocation.hide();
+
+        openTaskIndex = -1;
 
         displayEvents.fadeOut(animationTimeStep);
         newTaskButton.fadeOut(animationTimeStep, function () {
@@ -315,15 +341,27 @@
 
     function editExistingTask (event) {
         var $this = $(this);
-        var current_detail_date = $this.find(_c(DETAILDATECLASS));
-        var current_host        = $this.find(_c(HOSTCLASS));
-        var current_location    = $this.find(_c(LOCATIONCLASS));
-        var current_description = $this.find(_c(DESCRIPTIONCLASS));
 
-        inputDetailDate.val(current_detail_date.text());
-        inputHost.val(current_host.text());
-        inputLocation.val(current_location.text());
-        inputDescription.text(current_description.text());
+        var current_detail_date_text = $this.find(_c(DETAILDATECLASS)).text();
+        var current_host_text        = $this.find(_c(HOSTCLASS)).text();
+        var current_location_text    = $this.find(_c(LOCATIONCLASS)).text();
+        var current_description_text = $this.find(_c(DESCRIPTIONCLASS)).text();
+
+        inputDetailDate.val(current_detail_date_text);
+        inputHost.val(current_host_text);
+        inputLocation.val(current_location_text);
+        inputDescription.val(current_description_text);
+
+        errorDetailDate.hide();
+        errorHost.hide();
+        errorLocation.hide();
+
+        var existing_date = dateFromString(current_detail_date_text);
+        var test_date;
+        openTaskIndex = findExistingTask(current_detail_date_text,
+                                         current_host_text,
+                                         current_location_text,
+                                         current_description_text);
 
         displayEvents.fadeOut(animationTimeStep);
         newTaskButton.fadeOut(animationTimeStep, function () {
@@ -331,11 +369,117 @@
         });
     }
 
+    function findExistingTask (_date, _host, _location, _description) {
+        var existing_date = dateFromString(_date);
+        var test_date;
+        for (var i = 0; i < events.length; ++i) {
+            var element = events[i];
+            test_date = dateFromString(element.Date);
+            if (existing_date.toDateString() == test_date.toDateString() &&
+                _host == element.Host &&
+                _location == element.Location &&
+                _description == element.Description) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function trim (_string) {
+        return _string.replace(/^\s+|\s+$/g, '');
+    }
+
     function submitTask (event) {
-        editTaskDetails.fadeOut(animationTimeStep, function() {
-            displayEvents.fadeIn(animationTimeStep);
-            newTaskButton.fadeIn(animationTimeStep);
-        });
+        var date_text     = trim(inputDetailDate.val());
+        var host_text     = trim(inputHost.val());
+        var location_text = trim(inputLocation.val());
+        var descript_text = trim(inputDescription.val());
+
+        var error = false;
+
+        // check date
+        var date_object = new Date(date_text);
+        if (date_object.toString() === 'Invalid Date' || isNaN(date_object)) {
+            errorDetailDate.show();
+            error = true;
+        } else {
+            errorDetailDate.hide();
+        }
+        // check host
+        if (host_text.length === 0) {
+            errorHost.show();
+            error = true;
+        } else {
+            errorHost.hide();
+        }
+        // check location
+        if (location_text.length === 0) {
+            errorLocation.show();
+            error = true;
+        } else {
+            errorLocation.hide();
+        }
+
+        // success
+        if (!error) {
+            // new event
+            if (openTaskIndex === -1) {
+                events.push({
+                    "Date" : date_text,
+                    "Host" : host_text,
+                    "Location" : location_text,
+                    "Description" : descript_text
+                });
+
+                refreshEvents(events, calendar);
+            } else {
+                events.splice(openTaskIndex, 1);
+
+                events.push({
+                    "Date" : date_text,
+                    "Host" : host_text,
+                    "Location" : location_text,
+                    "Description" : descript_text
+                });
+
+                refreshEvents(events, calendar);
+            }
+
+            editTaskDetails.fadeOut(animationTimeStep, function() {
+                displayEvents.fadeIn(animationTimeStep);
+                newTaskButton.fadeIn(animationTimeStep);
+            });
+        }
+    }
+
+    function removeTask (_index) {
+        events.splice(_index, 1);
+        refreshEvents(events, calendar);
+    }
+
+    function removeThisTask (event) {
+        event.stopPropagation();
+
+        var $this = $(this);
+
+        var current_detail_date_text = $this.siblings(_c(DETAILDATECLASS)).text();
+        var current_host_text        = $this.siblings(_c(HOSTCLASS)).text();
+        var current_location_text    = $this.siblings(_c(LOCATIONCLASS)).text();
+        var current_description_text = $this.siblings(_c(DESCRIPTIONCLASS)).text();
+
+        var indexToRemove = findExistingTask(current_detail_date_text,
+                                             current_host_text,
+                                             current_location_text,
+                                             current_description_text);
+        if (indexToRemove !== -1) {
+            removeTask(indexToRemove);
+        }
+    }
+
+    function refreshEvents (_events, _calendar) {
+        calendar.find(_c(AGENDACLASS)).empty();
+        addEventsToCalendar(_events, _calendar);
+        hideEventDetail();
     }
 
     function bindObjects (argument) {
@@ -351,6 +495,9 @@
         inputHost        = editTaskDetails.find(_c(HOSTINPUTCLASS));
         inputLocation    = editTaskDetails.find(_c(LOCATIONINPUTCLASS));
         inputDescription = editTaskDetails.find(_c(DESCRIPTIONINPUTCLASS));
+        errorDetailDate  = inputDetailDate.siblings(_c(ERRORCLASS));
+        errorHost        = inputHost.siblings(_c(ERRORCLASS));
+        errorLocation    = inputLocation.siblings(_c(ERRORCLASS));
         submitTaskButton = $(_c(SUBMITTASKCLASS));
     }
 
@@ -360,8 +507,12 @@
         todayButton.on('click', goToday);
         rightButton.on('click',   goNextMonth);
         newTaskButton.on('click', beginEditingNewTask);
-        detail.on('click', _c(TASKCLASS), editExistingTask);
         submitTaskButton.on('click', submitTask);
+        detail.on('click', _c(TASKCLASS), editExistingTask);
+        detail.on(
+            'click',
+            _c(DELETECLASS),
+            removeThisTask);
     }
 
     $(function () {

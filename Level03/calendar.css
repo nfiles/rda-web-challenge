@@ -176,17 +176,38 @@ body {
             #detail .display-events .agenda .task:nth-child(odd) {
                 background-color: lightgrey;
             }
-                #detail .display-events .agenda .task .detail-date {
-                    margin-bottom: .5em;
-                }
-                #detail .display-events .agenda .task .host {
-                    font-weight: bold;
-                }
-                #detail .display-events .agenda .task .location {
-                    font-style: italic;
-                }
+            #detail .display-events .agenda .task .detail-date {
+                /*clear: both;*/
+                /*float: left;*/
+                margin-bottom: .5em;
+            }
+            #detail .display-events .agenda .task .host {
+                clear: both;
+                font-weight: bold;
+            }
+            #detail .display-events .agenda .task .location {
+                font-style: italic;
+            }
+            #detail .display-events .agenda .task .delete {
+                margin-top: .75em;
+                /*text-align: center;*/
+                font-size: .75em;
+                font-weight: bold;
+
+                border: 1px solid red;
+                background-color: white;
+            }
+            #detail .display-events .agenda .task .delete:hover {
+                background-color: pink;
+            }
+            #detail .display-events .agenda .task .delete:active {
+                background-color: lightgray;
+            }
+            #detail .display-events .agenda .task .delete:after {
+                content: 'DELETE';
+            }
     #detail .new-task {
-        border: 1px solid red;
+        border: 1px solid green;
         font-size: 1.5em;
         line-height: 2em;
         vertical-align: middle;
@@ -204,6 +225,7 @@ body {
         width: 100%;
         padding-left: 0;
         padding-right: 0;
+        padding-bottom: .5em;
         border: 1px solid black;
     }
         #detail .new-task-details > legend {
@@ -221,11 +243,27 @@ body {
         }
         #detail .new-task-details .new-task-input .description-input {
             width: 95%;
-            height: 5em;
+            height: 7em;
+        }
+        #detail .new-task-details .new-task-input input {
+            border: 1px solid black;
+        }
+        #detail .new-task-details .new-task-input textarea {
+            border: 1px solid black;
+        }
+        #detail .new-task-details .new-task-input .error {
+            color: red;
+            font-weight: normal;
         }
     #detail .new-task-details .submit-task {
         border: 1px solid green;
-        background-color: lightgray;
+        background-color: white;
         width: 40%;
         line-height: 1.5em;
     }
+        #detail .new-task-details .submit-task:hover {
+            background-color: #6c9;
+        }
+        #detail .new-task-details .submit-task:active {
+            background-color: lightgray;
+        }
