@@ -1,0 +1,10 @@
+Challenge 3.0 - HTML5, CSS, Javascript
+
+Take what you made for Week 2 and implement the following features for desktop:
+
+1. Basic calendar showing one month.
+2. Display events based on generated data. (See Week 2 for sample data)
+3. Change the month and year.
+4. Add/Remove events.
+
+I recommend using Moment.js for parsing and displaying dates, as well as jQuery for DOM manipulation. If you would like more sample data, check out GenerateData.com. Be sure your data has a host, location, date, and description.

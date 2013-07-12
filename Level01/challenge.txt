@@ -1,0 +1,7 @@
+Challenge 1.0 - HTML5, CSS
+
+Alright! So this is the first of many web challenges!
+Below is a screenshot of a page. You need to recreate that page.
+Like it said in the intro email, don't worry about recreating the exact look, just focus on layout and semantics.
+Shoot me an email when you complete it and I will get back to you as soon as possible!
+(Not all will be this simple, we just need a solid starting point.)
