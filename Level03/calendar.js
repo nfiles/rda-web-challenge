@@ -261,7 +261,8 @@
         displayEvents.html(self.find(_c(AGENDACLASS)).clone());
 
         displayEvents.find(_c(TASKCLASS))
-                     .append($(BUTTON_TAG).addClass(DELETECLASS));
+                     .append($(BUTTON_TAG).addClass(DELETECLASS)
+                                          .text('DELETE'));
 
         editTaskDetails.fadeOut(animationTimeStep, function () {
             newTaskButton.fadeIn(animationTimeStep);

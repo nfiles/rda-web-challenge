@@ -203,9 +203,6 @@ body {
             #detail .display-events .agenda .task .delete:active {
                 background-color: lightgray;
             }
-            #detail .display-events .agenda .task .delete:after {
-                content: 'DELETE';
-            }
     #detail .new-task {
         border: 1px solid green;
         font-size: 1.5em;
