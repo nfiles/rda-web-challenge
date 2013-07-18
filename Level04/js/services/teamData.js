@@ -2,6 +2,7 @@ teamApp.factory('teamData',
     function () {
         return {
             "players": [
+              {"name":"Jim"},
               {"name":"Brad"},
               {"name":"Brandon"},
               {"name":"Chris"},

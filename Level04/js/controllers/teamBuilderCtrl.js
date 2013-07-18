@@ -1,7 +1,9 @@
 (function(){'use strict';})();
 
-var controller = teamApp.controller('indexController',
+var controller = teamApp.controller('teamBuilderCtrl',
 	function indexController ($scope, teamData) {
+		// name of team
+		$scope.teamName = "";
 		// players that can be chosen
 		$scope.availablePlayers = {
 			all: teamData.players,
@@ -90,5 +92,18 @@ var controller = teamApp.controller('indexController',
 					all.splice(all.length, 0, item);
 				}
 			}
+		};
+
+		$scope.createTeam = function(name, players) {
+			var team = {
+				name: name,
+				players: []
+			};
+
+			for (var i = 0; i < players.length; ++i) {
+				team.players.push(players[i].name);
+			}
+
+			console.log(JSON.stringify(team, null, 2));
 		};
 	});
