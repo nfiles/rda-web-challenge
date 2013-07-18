@@ -1,0 +1,33 @@
+.players {
+	width: 250px;
+	height: 400px;
+}
+
+.control-group {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.teamBuilder {
+	height: 410px;
+	width: 100%;
+	position: relative;
+}
+	.teamBuilder > * {
+		float: left;
+		/*display: inline-block;*/
+	}
+	.teamBuilder > .selectionButtons {
+		/*position: absolute;*/
+		/*top: 50%;*/
+		/*margin-bottom: 50%;*/
+		/*width: 3em;*/
+		height:100%;
+	}
+.button-group > * {
+	display: block;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none;
+}

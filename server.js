@@ -15,6 +15,7 @@ http.createServer(function (request, response) {
 
     var filePath = '.' + url_parts.pathname;
 
+    console.log('');
     console.log('extname: *' + path.extname(filePath) + '*');
     console.log('extname length: ' + path.extname(filePath).length);
     console.log('true?: ' + (path.extname(filePath) === "").toString());
@@ -26,18 +27,18 @@ http.createServer(function (request, response) {
 
         // remember directory for future requests
         currentDir = filePath.substring(0, filePath.length - 1);
-        // console.log('currentDir: ' + currentDir);
+        console.log('currentDir: ' + currentDir);
 
         // append the default file
         filePath   += defaultFile;
-        // console.log('new filePath:       ' + filePath);
+        console.log('new filePath:       ' + filePath);
     }
 
     // file is not a directory
     else {
         // append filePath (without preceding '.') to current directory
         filePath = currentDir + filePath.substring(1);
-        // console.log('filePath:           ' + filePath);
+        console.log('filePath:           ' + filePath);
     }
 
     var extname = path.extname(filePath);
@@ -55,7 +56,6 @@ http.createServer(function (request, response) {
     console.log('contentType:        ' + contentType);
 
     fs.exists(filePath, function(exists) {
-
         if (exists) {
             fs.readFile(filePath, function(error, content) {
                 if (error) {
@@ -73,10 +73,7 @@ http.createServer(function (request, response) {
             response.end();
         }
     });
-
-    console.log('');
 }).listen(8080);
 
 console.log('Server running at http://localhost:8080/');
 console.log('Close this window to stop the server...');
-console.log('');

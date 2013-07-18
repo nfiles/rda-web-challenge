@@ -516,7 +516,7 @@
     }
 
     $(function () {
-        current_date  = new Date('Jun 1 2013');
+        current_date  = new Date();
 
         bindObjects();
         wireEvents();
