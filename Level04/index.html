@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="./css/site.css" />
 </head>
 <body ng-cloak>
-  <div ng-controller="teamBuilderCtrl" class="team-builder">
+  <div ng-controller="teamBuilderCtrl"class="team-builder">
     <h1>Create your team:</h1>
 
     <div class="control-group">
       <label for="teamName">Team Name: </label>
-      <input type="text" id="teamName" name="teamName" ng-model="teamName" />
+      <input type="text"
+             id="teamName"
+             name="teamName"
+             ng-model="teamName" />
     </div>
 
     <div class="team-options">
@@ -26,11 +29,15 @@
       
       <div class="selection-buttons button-group">
         <button class="select"
-                ng-click="moveItemsToList(availablePlayers.all, availablePlayers.highlighted, chosenPlayers.all)">
+                ng-click="moveItemsToList(availablePlayers.all,
+                                          availablePlayers.highlighted,
+                                          chosenPlayers.all)">
           &rarr;
         </button>
         <button class="discard"
-                ng-click="moveItemsToList(chosenPlayers.all, chosenPlayers.highlighted, availablePlayers.all)">
+                ng-click="moveItemsToList(chosenPlayers.all,
+                                          chosenPlayers.highlighted,
+                                          availablePlayers.all)">
            &larr;
         </button>
       </div>
@@ -45,26 +52,35 @@
 
       <div class="order-buttons button-group">
         <button class="move-top"
-                ng-click="moveItemsTop(chosenPlayers.all, chosenPlayers.highlighted)">
+                ng-click="moveItemsTop(chosenPlayers.all,
+                                       chosenPlayers.highlighted)">
           &uArr;
         </button>
         <button class="move-up"
-                ng-click="moveItemsUp(chosenPlayers.all, chosenPlayers.highlighted)">
+                ng-click="moveItemsUp(chosenPlayers.all,
+                                      chosenPlayers.highlighted)">
           &uarr;
         </button>
         <button class="move-down"
-                ng-click="moveItemsDown(chosenPlayers.all, chosenPlayers.highlighted)">
+                ng-click="moveItemsDown(chosenPlayers.all,
+                                        chosenPlayers.highlighted)">
           &darr;
         </button>
         <button class="move-bottom"
-                ng-click="moveItemsBottom(chosenPlayers.all, chosenPlayers.highlighted)">
+                ng-click="moveItemsBottom(chosenPlayers.all,
+                                          chosenPlayers.highlighted)">
           &dArr;
         </button>
       </div>
     </div>
     <div class="createTeam">
-      <button ng-click="createTeam(teamName, chosenPlayers.all)">Create</button>
+      <button ng-click="createTeam(teamName,
+                                   chosenPlayers.all)">Create</button>
     </div>
+
+    <code class="well">
+      <pre>{{teamJSON}}</pre>
+    </code>
   </div>
 
   <script type="text/javascript" src="./lib/jquery/jquery-1.10.1.js"></script>
