@@ -112,7 +112,7 @@
 
                 console.log(team);
                 // console.log(JSON.stringify(team, null, 2));
-                $scope.teamJSON = JSON.stringify(team, null, 2);
+                // $scope.teamJSON = JSON.stringify(team, null, 2);
             };
         });
 	//#region internal methods
