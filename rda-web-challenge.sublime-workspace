@@ -1,0 +1,1815 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pre",
+				"prev_tab"
+			],
+			[
+				"ch",
+				"children	.children()"
+			],
+			[
+				"tab",
+				"tab_window"
+			],
+			[
+				"tab_",
+				"tab_content"
+			],
+			[
+				"wh",
+				"width	.width"
+			],
+			[
+				"eac",
+				"each	.each()"
+			],
+			[
+				"movei",
+				"moveItemInArray"
+			],
+			[
+				"whereF",
+				"whereFrom"
+			],
+			[
+				"moveI",
+				"moveItemInArray"
+			],
+			[
+				"wher",
+				"whereTo"
+			],
+			[
+				"team",
+				"$scope.teamJSON"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"high",
+				"highlighted.length"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"destin",
+				"destinationAll"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"index",
+				"indexController"
+			],
+			[
+				"file",
+				"filePath"
+			],
+			[
+				"fil",
+				"filePath"
+			],
+			[
+				"ex",
+				"extname"
+			],
+			[
+				"di",
+				"directoryPattery"
+			],
+			[
+				"content",
+				"contentType"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"inputd",
+				"inputDetailDate"
+			],
+			[
+				"cur",
+				"current_description"
+			],
+			[
+				"curr",
+				"current_location"
+			],
+			[
+				"va",
+				"val"
+			],
+			[
+				"inpu",
+				"input_host"
+			],
+			[
+				"input",
+				"input_detail_date"
+			],
+			[
+				"DES",
+				"DESCRIPTIONINPUTCLASS"
+			],
+			[
+				"locaioni",
+				"LOCATIONINPUTCLASS"
+			],
+			[
+				"Des",
+				"DESCRIPTIONCLASS"
+			],
+			[
+				"det",
+				"DETAILDATECLASS"
+			],
+			[
+				"sub",
+				"submitTask"
+			],
+			[
+				"fade",
+				"fadeIn"
+			],
+			[
+				"newt",
+				"newTaskButton"
+			],
+			[
+				"sho",
+				"showEditTaskDetails"
+			],
+			[
+				"anima",
+				"animationTimeStep"
+			],
+			[
+				"anim",
+				"animationTimeStep"
+			],
+			[
+				"edit",
+				"editTaskDetails"
+			],
+			[
+				"hidee",
+				"hideEditTaskDetail"
+			],
+			[
+				"net",
+				"newTaskDetails"
+			],
+			[
+				"deta",
+				"detail"
+			],
+			[
+				"detail",
+				"detail-date"
+			],
+			[
+				"disp",
+				"display-events"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"ds",
+				"display-events"
+			],
+			[
+				"dis",
+				"displayEvents"
+			],
+			[
+				"bord-b",
+				"border-bottom-style"
+			],
+			[
+				"class",
+				"classBeginsWith"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"cu",
+				"current_date"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"ne",
+				"next_month"
+			],
+			[
+				"date",
+				"Date"
+			],
+			[
+				"cre",
+				"createYear"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"lef",
+				"leftButton"
+			],
+			[
+				"TODA",
+				"TODAYBUTTONCLASS"
+			],
+			[
+				"toda",
+				"todayButton"
+			],
+			[
+				"left",
+				"LEFTMONTHCLASS"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"bu",
+				"button"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"age",
+				"agenda"
+			],
+			[
+				"mon",
+				"monthBodyElement"
+			],
+			[
+				"MON",
+				"MONTHBODYCLASS"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"D",
+				"Date"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"create",
+				"createMonth"
+			],
+			[
+				"get",
+				"getDate"
+			],
+			[
+				"month",
+				"MONTHCLASS"
+			],
+			[
+				"g",
+				"getMonth"
+			],
+			[
+				"se",
+				"selectToday"
+			],
+			[
+				"MONTH",
+				"MONTHCLASS"
+			],
+			[
+				"crea",
+				"createDay"
+			],
+			[
+				"ap",
+				"append"
+			],
+			[
+				"f",
+				"f	Anonymous Function"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"MONE",
+				"MONTHTITLE"
+			],
+			[
+				"Jan",
+				"January"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"main",
+				"MAINCALENDARID"
+			],
+			[
+				"app",
+				"APPOINTMENTCLASS"
+			],
+			[
+				"hidd",
+				"HIDDENCLASS"
+			],
+			[
+				"d",
+				"div"
+			],
+			[
+				"mont",
+				"monthElement"
+			],
+			[
+				"conte",
+				"contentType"
+			],
+			[
+				"da",
+				"days"
+			],
+			[
+				"week",
+				"weekElement"
+			],
+			[
+				"html",
+				"html"
+			],
+			[
+				"day",
+				"day"
+			],
+			[
+				"agen",
+				"agendaElement"
+			],
+			[
+				"u",
+				"utf-8"
+			],
+			[
+				"char",
+				"charset"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"link",
+				"link	link - stylesheet"
+			],
+			[
+				"ko",
+				"ko.dep	knockoutjs dependent observable"
+			],
+			[
+				"nam",
+				"nameVisible"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"scr",
+				"script	Tag"
+			],
+			[
+				"read",
+				"ready	$(document).ready"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"j",
+				"javascript"
+			],
+			[
+				"list-",
+				"list-style-position"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"conta",
+				"containsANumber"
+			],
+			[
+				"func",
+				"function"
+			],
+			[
+				"charat",
+				"character"
+			],
+			[
+				"fo",
+				"for	for (…) {…}"
+			],
+			[
+				"in",
+				"inner"
+			],
+			[
+				"e",
+				"equals"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"inli",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Level05/challenge/challenge.txt",
+			"settings":
+			{
+				"buffer_size": 1056,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Level05/index.html",
+			"settings":
+			{
+				"buffer_size": 1304,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Level05/js/tabbify/tabbify.js",
+			"settings":
+			{
+				"buffer_size": 1102,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Level05/js/app.js",
+			"settings":
+			{
+				"buffer_size": 186,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Level05/css/site.css",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Sublime-JSHint/JSHint.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"error",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"wr",
+				"Word Wrap: Toggle"
+			],
+			[
+				"css",
+				"Emmet: Reflect CSS Value"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"emmet",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"ssj",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"conver",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"errro",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"align",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"ali",
+				"Preferences: Alignment File Settings – Syntax Specific – User"
+			],
+			[
+				"erro",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"lintererr",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"linterr",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"errorl",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"errors",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"lin",
+				"SublimeLinter: Lint Current File"
+			],
+			[
+				"jq",
+				"Set Syntax: jQuery (JavaScript)"
+			],
+			[
+				"alignke",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"key b",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"settings",
+				"Preferences: Settings - Default"
+			],
+			[
+				"alignm",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"emmetwr",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"jsl",
+				"JSHint: Linter"
+			],
+			[
+				"ssjq",
+				"Set Syntax: jQuery (JavaScript)"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"minim",
+				"View: Toggle Minimap"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"emm",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"",
+				"JSHint: Linter"
+			],
+			[
+				"ista",
+				"Package Control: Install Package"
+			],
+			[
+				"csss",
+				"Snippet: CSS - box-shadow: ;"
+			],
+			[
+				"mo",
+				"Snippet: modeline"
+			],
+			[
+				"cssl",
+				"CSSLint: Run CSSLint"
+			],
+			[
+				"tics",
+				"Tidy CSS"
+			],
+			[
+				"tidy",
+				"Tidy CSS (Low Compression)"
+			],
+			[
+				"csst",
+				"Tidy CSS (Highest Compression)"
+			],
+			[
+				"td",
+				"TidyHTML"
+			],
+			[
+				"remo	",
+				"Package Control: Remove Package"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"depen	",
+				"Snippet: knockoutjs dependent observable"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"fold",
+				"Project: Add Folder"
+			],
+			[
+				"stat",
+				"View: Toggle Status Bar"
+			],
+			[
+				"men",
+				"View: Toggle Menu"
+			],
+			[
+				"add ",
+				"Project: Add Folder"
+			],
+			[
+				"html",
+				"TidyHTML"
+			],
+			[
+				"sscss",
+				"Set Syntax: CSS"
+			],
+			[
+				"tit",
+				"Convert Case: Title Case"
+			],
+			[
+				"title",
+				"Convert Case: Title Case"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"sshtm",
+				"Set Syntax: HTML"
+			],
+			[
+				"tid",
+				"TidyHTML"
+			],
+			[
+				"ttle",
+				"Convert Case: Title Case"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"jan",
+				"Fancy Projects: Create new project"
+			],
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"me",
+				"View: Toggle Menu"
+			],
+			[
+				"ssht",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssh",
+				"Set Syntax: HTML5"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/js/controllers/teamBuilderCtrl.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/index.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/js/app.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level05/server.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level05/challenge/challenge.txt",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/css/site.css",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/challenge/challenge.txt",
+		"/C/Users/files/Desktop/test.js",
+		"/C/Users/files/Documents/RDA/Learning/Pluralsight/2013-07-11_Single_Page_Apps_JumpStart/6-breeze/before/CCJS-Scratch/Controllers/BreezeController.cs",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/js/controllers/indexController.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/js/services/teamData.js",
+		"/C/Users/files/Dropbox/School/COMP 401/Projects/Project02/Project02GumRoad/Project02GumRoad/GRService.m",
+		"/C/Users/files/Dropbox/School/COMP 401/Projects/Project02/Project02GumRoad/Project02GumRoad/GRLoginVC.m",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/js/services/teamPlayers.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/scripts/angular.js",
+		"/C/Users/files/Documents/RDA/Learning/Pluralsight/2013-07-15_AngularJS_Fundamentals/2-markup-controllers/before/AngularSeed/app/NewEvent.html",
+		"/C/Users/files/Documents/RDA/Learning/Pluralsight/2013-07-15_AngularJS_Fundamentals/2-markup-controllers/before/AngularSeed/app/EventDetails.html",
+		"/C/Users/files/Documents/RDA/Learning/Pluralsight/2013-07-15_AngularJS_Fundamentals/2-markup-controllers/before/AngularSeed/app/js/app.js",
+		"/C/Users/files/Documents/RDA/Learning/Pluralsight/2013-07-15_AngularJS_Fundamentals/2-markup-controllers/before/AngularSeed/app/js/filters.js",
+		"/C/Users/files/Documents/RDA/Learning/Pluralsight/2013-07-15_AngularJS_Fundamentals/2-markup-controllers/before/AngularSeed/app/js/directives.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/scripts/app.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/scripts/main.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/scripts/teamApp.js",
+		"/C/Users/files/Downloads/angular-require-master/package.json",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/server.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/js/controllers/indexController.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/index.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/backup/index.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/backup/scripts/indexController.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/js/main.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/js/controllers.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/js/directives.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/RunWebServer.bat",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/js/routes.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/js/services.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/partials/partial2.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/app/partials/partial1.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/index.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/backup/scripts/teamApp.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/indexController.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/index.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/challenge.txt",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level03/index.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02/index.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level03/calendar.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level04/challenge.png",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level01/index.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level03/events.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level03/calendar.css",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/rda-web-challenge.sublime-workspace",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/README.md",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02/events.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02/calendar.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02/calendar.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/RDA/Towne Park Mobile Claims/Towne Park Mobile Claims.sln",
+		"//rdacorp.com/fs/home/rda_empl/files/My Documents/Status/2013/2013-06-28_status.txt",
+		"/C/Users/files/Dropbox/Apps/Pancake.io/index.md",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/Alignment/Base File.sublime-settings",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/Terminal/Base File.sublime-settings",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript.sublime-settings",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/C/Users/files/Documents/IISExpress/config/applicationhost.config",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/files/Downloads/Shenanigans.2013-06-26.173124+00.2013-06-26.183124+00.json",
+		"//rdacorp.com/fs/home/rda_empl/files/My Documents/Status/2013/2013-06-21_status.txt",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02.0/calendar.css",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02.0/calendar.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02.0/events.js",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level02.0/index.html",
+		"/C/Windows/Microsoft.NET/Framework/v4.0.30319/Config/machine.config",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level01.0/index.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/RDA/RDA Expense Reports/expense_model_sketch.txt",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Status/2013/2013-06-21_status.txt",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Status/2013/2013-06-14_status.txt",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Status/2013/2013-06-28_status.txt",
+		"/C/Users/files/Desktop/hello_server.js",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/RDA/RDA Expense Reports/RDA_Expense_Reports/KnockoutModel/index.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/RDA/RDA Expense Reports/RDA_Expense_Reports/KnockoutModel/script.js",
+		"/C/Users/files/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/files/Dropbox/Apps/Pancake.io/getting-started.txt",
+		"/C/Users/files/Dropbox/Apps/Pancake.io/Level00/index.html",
+		"/C/Users/files/Dropbox/Apps/Pancake.io/example.txt",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/Level00/index.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/everyday-forms.html",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/.git/.COMMIT_EDITMSG.swp",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/.git/config",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/.git/description",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/.git/HEAD",
+		"/C/Users/files/Documents/RDA/rda-web-challenge/.git/COMMIT_EDITMSG",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Jim Buck Challenge/Level00/server.js",
+		"//rdacorp.com/fs/home/rda_empl/files/My Documents/Learning/Jim Buck Challenge/Level00/index.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/everyday-tables.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-navigation.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-mediahero.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-layout.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/Introduction.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-icons.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-menus.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-misccomponents.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-morebuttons.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-navbar.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap-simplelayout.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/everyday-buttons.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/everyday-typography.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap/css/bootstrap.min.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap/css/bootstrap.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap/css/bootstrap-responsive.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/4-components/bootstrap/css/bootstrap-responsive.min.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-05 Build Your First Website/byfs.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-07 Introduction to Bootstrap/1-introduction/before/stylesheet.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-04 Introduction to CSS/stylesheet2.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Pluralsight/2013-06-04 Introduction to CSS/stylesheet.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Jim Buck Challenge/Level00/index.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/Learning/Jim Buck Challenge/Level00/level00.css",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/RDA/Jim Buck Challenge/2013-06-13/index.html",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/RDA/Jim Buck Challenge/2013-06-13/server.js",
+		"//rdacorp.com/fs/Home/RDA_EMPL/files/My Documents/RDA/Jim Buck Challenge/2013-06-13/RunWebServer.bat",
+		"//rdacorp.com/fs/Home/rda_empl/files/My Documents/Learning/Pluralsight/2013-06-11 C# Fundamentals - Part 1/1-introduction/hello_world.cs",
+		"//rdacorp.com/fs/home/rda_empl/files/My Documents/Status/2013/2013-06-07_status.txt",
+		"/C/Users/files/Desktop/GRService.m",
+		"/C/Users/files/Desktop/GRLoginVC.m",
+		"/C/Users/files/Desktop/NSData+Additions.m",
+		"/C/Users/files/Downloads/phonegap-2.8.0/LICENSE"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"where",
+			"div",
+			"where",
+			"; ",
+			"document.write",
+			"where",
+			"teamOptions",
+			"Builder",
+			"highlighted",
+			"\\s+",
+			"//",
+			"\\s+",
+			"\\s*",
+			"availablePlayers",
+			"availableList",
+			"selected",
+			"selectedPlayers",
+			"availableHighlightedPlayers",
+			"highlightedPlayers",
+			"selectedPlayers",
+			"SelectedPlayers",
+			"selectedPlayers",
+			"\\s+",
+			"\\{[\\\"\\s\\w:\\.]*\\}",
+			"\\s*",
+			"\\{[^\\{]*\\}",
+			"\"id\"",
+			"id",
+			"1",
+			"name",
+			"\".*\"",
+			"// cons",
+			"console.log",
+			"directoryPattery",
+			"current_level",
+			"'",
+			"pattern",
+			"var",
+			"input_",
+			"input",
+			").",
+			")",
+			";",
+			"editTaskDetails",
+			"detail-",
+			"-text",
+			"DETAILDATECLASS",
+			"-text",
+			"DETAILDATECLASS",
+			"TASKCLASS",
+			"SUBMITTASKCLASS",
+			"newTaskDetails",
+			"NEWTASKDETAILS",
+			"newTaskDetails",
+			"argument",
+			"<div",
+			"div",
+			"height",
+			"mainc",
+			"none",
+			"button",
+			"div",
+			"#detail",
+			"detail",
+			"DETAILCLASS",
+			"detail",
+			"pt",
+			"composite",
+			"monthSelector",
+			"yearSelector",
+			"yearS",
+			"_day",
+			"day ",
+			"daySelector",
+			"fadeOut",
+			"yearMonthSelector",
+			"monthDaySelector",
+			"yearMonthDaySelector",
+			"MonthSelector",
+			"monthSelector",
+			"MonthSelector",
+			"monthSelector",
+			"yearSelector",
+			"month ",
+			"month",
+			"\\\\",
+			"\\",
+			"\\^",
+			"'month",
+			"\\.each",
+			"show",
+			"hide",
+			"100",
+			"current_date",
+			"refreshCalendar",
+			"getId",
+			"getClass",
+			"_id",
+			"_class",
+			"go",
+			"previousMonth",
+			"root",
+			"displayCalendarWithEvents",
+			"\"",
+			"CURRENT_DATE",
+			"calendar",
+			");",
+			"displayEventDetail",
+			"displayEvents",
+			"left",
+			"month-button",
+			"[class^=\"day\"]",
+			"[class^=\"month\"]",
+			"month-button",
+			"goM",
+			"\"button",
+			"button ",
+			"div",
+			"getId",
+			"getClass",
+			"new da",
+			"\\.date",
+			"box-sizing",
+			"\\n\\d",
+			"\\n\\n\\d",
+			"\\n\\n",
+			"\\t",
+			"-border"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"\\n\\d",
+			"\\n",
+			".left-border",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Level05/challenge/challenge.txt",
+					"settings":
+					{
+						"buffer_size": 1056,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1056,
+								1056
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"smarttabs": true,
+								"trailing": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Level05/index.html",
+					"settings":
+					{
+						"buffer_size": 1304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								113,
+								113
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"smarttabs": true,
+								"trailing": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Level05/js/tabbify/tabbify.js",
+					"settings":
+					{
+						"buffer_size": 1102,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1026,
+								1026
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"smarttabs": true,
+								"trailing": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Level05/js/app.js",
+					"settings":
+					{
+						"buffer_size": 186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								186,
+								186
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"smarttabs": true,
+								"trailing": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Level05/css/site.css",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"smarttabs": true,
+								"trailing": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.csslint_result_view":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/H/My Documents/RDA.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true
+}
