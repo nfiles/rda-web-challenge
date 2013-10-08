@@ -1,8 +1,11 @@
 (function ($) {
-    $(function function_name (argument) {
+    $(function (argument) {
         var tab_window = $('.tab-window');
 
-        tab_window.tabbify();
-        // tab_window.showTab()
+        tab_window.tabbify({
+            // speed: 50,
+            // initial_tab: 3
+        });
+
     });
 })( jQuery );

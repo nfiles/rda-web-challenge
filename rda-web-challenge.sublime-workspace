@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"padding",
+				"padding"
+			],
+			[
+				"border-bot",
+				"border-bottom-style"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"border-ri",
+				"border-right-style"
+			],
+			[
 				"pre",
 				"prev_tab"
 			],
@@ -284,10 +300,6 @@
 				"text-align"
 			],
 			[
-				"padding",
-				"padding-left"
-			],
-			[
 				"list-st",
 				"list-style-type"
 			],
@@ -502,18 +514,6 @@
 			[
 				"in",
 				"inner"
-			],
-			[
-				"e",
-				"equals"
-			],
-			[
-				"pa",
-				"padding"
-			],
-			[
-				"inli",
-				"inline-block"
 			]
 		]
 	},
@@ -528,10 +528,18 @@
 			}
 		},
 		{
+			"file": "Level05/css/site.css",
+			"settings":
+			{
+				"buffer_size": 74,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "Level05/index.html",
 			"settings":
 			{
-				"buffer_size": 1304,
+				"buffer_size": 1631,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,7 +547,7 @@
 			"file": "Level05/js/tabbify/tabbify.js",
 			"settings":
 			{
-				"buffer_size": 1102,
+				"buffer_size": 3447,
 				"line_ending": "Windows"
 			}
 		},
@@ -547,15 +555,15 @@
 			"file": "Level05/js/app.js",
 			"settings":
 			{
-				"buffer_size": 186,
+				"buffer_size": 208,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Level05/css/site.css",
+			"file": "Level05/css/tabbify.css",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1234,
 				"line_ending": "Windows"
 			}
 		}
@@ -1026,6 +1034,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"background-color",
+			"tod",
+			"0",
+			"4px",
 			"where",
 			"div",
 			"where",
@@ -1149,11 +1161,7 @@
 			"new da",
 			"\\.date",
 			"box-sizing",
-			"\\n\\d",
-			"\\n\\n\\d",
-			"\\n\\n",
-			"\\t",
-			"-border"
+			"\\n\\d"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1175,7 +1183,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1291,18 +1299,130 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Level05/index.html",
+					"file": "Level05/css/site.css",
 					"settings":
 					{
-						"buffer_size": 1304,
+						"buffer_size": 74,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								113,
-								113
+								74,
+								74
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"smarttabs": true,
+								"trailing": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Level05/index.html",
+					"settings":
+					{
+						"buffer_size": 1631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								93
 							]
 						],
 						"settings":
@@ -1403,19 +1523,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "Level05/js/tabbify/tabbify.js",
 					"settings":
 					{
-						"buffer_size": 1102,
+						"buffer_size": 3447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1026,
-								1026
+								149,
+								149
 							]
 						],
 						"settings":
@@ -1516,19 +1636,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "Level05/js/app.js",
 					"settings":
 					{
-						"buffer_size": 186,
+						"buffer_size": 208,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								186,
-								186
+								141,
+								141
 							]
 						],
 						"settings":
@@ -1628,113 +1748,28 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Level05/css/site.css",
+					"buffer": 5,
+					"file": "Level05/css/tabbify.css",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1234,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								426,
+								426
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"smarttabs": true,
-								"trailing": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1810,6 +1845,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 245.0,
+	"side_bar_width": 164.0,
 	"status_bar_visible": true
 }
